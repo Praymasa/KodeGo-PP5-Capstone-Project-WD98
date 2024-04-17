@@ -1,15 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: hsla(241, 15%, 35%, 0.15);
-    background-image:
-        radial-gradient(at 55% 49%, hsla(337, 47%, 43%, 0.25) 0px, transparent 50%),
-        radial-gradient(at 1% 98%, hsla(337, 47%, 43%, 0.25) 0px, transparent 50%),
-        radial-gradient(at 99% 2%, hsla(337, 47%, 43%, 0.25) 0px, transparent 50%),
-        radial-gradient(at 99% 98%, hsla(337, 47%, 43%, 0.25) 0px, transparent 50%),
-        radial-gradient(at 1% 1%, hsla(337, 47%, 43%, 0.25) 0px, transparent 50%) !important;
     font-size: 16px !important;
     font-family: "Belleza", sans-serif !important;
+    background-color: #d7fadc !important;
 }
 
 .breadcrumb-item {
@@ -29,6 +23,7 @@ body {
     letter-spacing: 1px;
 }
 
+/* Navigation-Css */
 #navigationBar {
     background-color: #4E4C67 !important;
 }
@@ -45,8 +40,6 @@ body {
 #drawer-brand-name span {
     color: #A53860;
 }
-
-
 
 .root {
     flex-grow: 1;
@@ -70,37 +63,14 @@ body {
     text-shadow: 3px 2px #F3F3F3;
 }
 
-.welcome-pg-img {
-    background-color: #4e4d66;
-    background-image:
-        radial-gradient(at 99% 98%, hsla(334, 93%, 56%, 0.38) 0px, transparent 50%),
-        radial-gradient(at 1% 2%, hsla(334, 93%, 56%, 0.38) 0px, transparent 50%);
-}
+/* Navigation-CSS */
 
-#welcome-pg span,
-#hth span,
-#hth .hashlink,
-.color,
-#difference .color {
-    color: #A53860;
-}
-
-.btn-links {
-    background-color: #4E4C67 !important;
-    box-shadow: 5px 5px #9595a3 !important;
-}
-
-#hth .family-word {
-    color: #A53860;
-    font-size: 1.5rem;
-}
-
-.why .color {
-    color: #A53860;
-    font-weight: bold;
-}
-
-.why-img {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+#why {
+    background-image: url(../public/Images/Family-background-light.jpg);
+    min-height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
