@@ -92,8 +92,8 @@ export default function WhyUs() {
         >
           {whyUsItems.map((item, index) => (
             <Box key={index}>
-              <Typography variant="h6" className="color" gutterBottom>
-                {item.title}
+              <Typography variant="h6" gutterBottom>
+                <b>{item.title}</b>
               </Typography>
               <Typography variant="body1" gutterBottom>
                 {item.description}

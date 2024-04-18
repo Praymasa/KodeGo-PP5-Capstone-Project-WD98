@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Breadcrumbs, Grid, Link, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { fetchEmployees } from "../servicesApi";
 import EmployeeCard from "./EmployeeCard";
 import ReservationForm from "./ReservationForm";
@@ -9,7 +9,7 @@ interface Props {
   onSelectEmployee: (employee: Employee) => void;
 }
 
-function EmployeeList({}: Props) {
+export default function EmployeeList({}: Props) {
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [selectedLocation, setSelectedLocation] = useState<string>("");
   const [selectedPosition, setSelectedPosition] = useState<string>("");
@@ -59,37 +59,43 @@ function EmployeeList({}: Props) {
 
   return (
     <Box>
-      <Breadcrumbs aria-label="breadcrumb" style={{ marginBottom: "1rem" }}>
-        <Typography color="secondary">Select Location</Typography>
-        {locations.map((location, index) => (
-          <Box key={location}>
-            {index > 0 && <span className="breadcrumb-divider">/</span>}
-            <Link
-              color={selectedLocation === location ? "inherit" : "primary"}
-              onClick={() => handleLocationChange(location)}
-            >
-              {location}
-            </Link>
-          </Box>
+      <Typography variant="h6" style={{ marginBottom: "1rem" }}>
+        <b>Choose a Location</b>
+      </Typography>
+      <Box sx={{ display: "flex", marginBottom: "1rem" }}>
+        {locations.map((location, _index) => (
+          <Button
+            key={location}
+            variant={selectedLocation === location ? "contained" : "outlined"}
+            color={selectedLocation === location ? "secondary" : "primary"}
+            onClick={() => handleLocationChange(location)}
+            style={{ marginRight: "0.5rem" }}
+          >
+            {location}
+          </Button>
         ))}
-      </Breadcrumbs>
+      </Box>
 
       {selectedLocation && (
         <Box>
-          <Breadcrumbs aria-label="breadcrumb" style={{ marginBottom: "1rem" }}>
-            <Typography color="secondary">Select Position</Typography>
-            {positions.map((position, index) => (
-              <div key={position}>
-                {index > 0 && <span className="breadcrumb-divider">/</span>}
-                <Link
-                  color={selectedPosition === position ? "inherit" : "primary"}
-                  onClick={() => handlePositionChange(position)}
-                >
-                  {position}
-                </Link>
-              </div>
+          <Typography color="secondary" style={{ marginBottom: "1rem" }}>
+            Select Position
+          </Typography>
+          <Box sx={{ display: "flex", marginBottom: "1rem" }}>
+            {positions.map((position, _index) => (
+              <Button
+                key={position}
+                variant={
+                  selectedPosition === position ? "contained" : "outlined"
+                }
+                color={selectedPosition === position ? "secondary" : "primary"}
+                onClick={() => handlePositionChange(position)}
+                style={{ marginRight: "0.5rem" }}
+              >
+                {position}
+              </Button>
             ))}
-          </Breadcrumbs>
+          </Box>
 
           <Typography variant="h6" gutterBottom>
             Employees in {selectedLocation}
@@ -124,5 +130,3 @@ function EmployeeList({}: Props) {
     </Box>
   );
 }
-
-export default EmployeeList;

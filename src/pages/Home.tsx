@@ -9,8 +9,6 @@ import {
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Diversity2Icon from "@mui/icons-material/Diversity2";
-import Family from "../../public/Images/Family at home.png";
-import FamilyLife from "../../public/Images/home-front.png";
 import FamilyPhone from "../../public/Images/family-phone.webp";
 import React from "react";
 import BookingForm from "../components/BookingForm";
@@ -122,7 +120,6 @@ export default function Home() {
           </Grid>
           <Grid item xs={12} md={6}></Grid>
         </Grid>
-        <Box className="curve"></Box>
       </Box>
 
       <Divider />
@@ -145,94 +142,81 @@ export default function Home() {
           Here To Help to be at <span>Y</span>our<span>B</span>est.
         </Typography>
 
-        <Avatar
-          variant="square"
-          src={FamilyLife}
-          sx={{
-            float: "right",
-            width: { xs: "100%", sm: "40%" },
-            height: { xs: "50%", xl: "40%" },
-            objectFit: "cover",
-            m: { xs: 2, sm: 2 },
-            border: "1px solid black",
-            boxShadow: "15px 15px  #9C27B0",
-            borderRadius: "5px",
-          }}
-        />
-        <Typography
-          variant="body1"
-          sx={{
-            marginTop: { xs: 2, xl: 10 },
-            marginLeft: { xs: 0, lg: 5 },
-            marginBottom: 5,
-            maxWidth: 500,
-          }}
-        >
-          <span className="family-word">Family Life</span> is challenging, and
-          so, too, is the role mothers and fathers play at work and at home.
-          Juggling to the roles as a parent, partner, employee, and household
-          manager is a delicate balancing act. From prioritizing tasks to
-          maintaining communication and finding time for self-care, navigating
-          these responsibilities requires finesse.
-        </Typography>
-        <br />
-        <Typography
-          variant="h4"
-          className="bottom-line"
-          sx={{
-            display: "inline",
-            visibility: { xs: "hidden", md: "visible" },
-            position: { xs: "absolute", md: "relative" },
-            marginLeft: { xs: 0, lg: 20 },
-          }}
-        >
-          Here To Help to be at <span>Y</span>our<span>B</span>est.
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            marginLeft: { xs: 0, lg: 30 },
-            marginTop: 5,
-            maxWidth: 700,
-          }}
-        >
-          We offer{" "}
-          <HashLink to={"/services#housekeeping"} className="hashlink">
-            Housekeeping
-          </HashLink>{" "}
-          ,{" "}
-          <HashLink to={"/services#childcare"} className="hashlink">
-            Child Care
-          </HashLink>
-          , and{" "}
-          <HashLink to={"/services#seniorcare"} className="hashlink">
-            Senior Care
-          </HashLink>{" "}
-          services to ease the burden of managing multiple responsibilities. By
-          outsourcing these tasks to our professionals, you can reclaim valuable
-          time to focus on work, family, and personal well-being. Our services
-          not only ensure a clean and organized living environment but also
-          provide expert care for children and seniors, offering peace of mind
-          and support for busy individuals balancing numerous roles.
-        </Typography>
+        <Grid container p={5}>
+          <Grid item xs={12} sm={6}></Grid>
+          <Grid item xs={12} sm={6}>
+            <Typography
+              variant="body1"
+              sx={{
+                marginTop: { xs: 2, xl: 10 },
+                marginLeft: { xs: 0, lg: 5 },
+                marginBottom: 5,
+                maxWidth: 500,
+              }}
+            >
+              <span className="family-word">Family Life</span> is challenging,
+              and so, too, is the role mothers and fathers play at work and at
+              home. Juggling to the roles as a parent, partner, employee, and
+              household manager is a delicate balancing act. From prioritizing
+              tasks to maintaining communication and finding time for self-care,
+              navigating these responsibilities requires finesse.
+            </Typography>
+            <br />
+            <Typography
+              variant="h4"
+              className="bottom-line"
+              sx={{
+                display: "inline",
+                visibility: { xs: "hidden", md: "visible" },
+                position: { xs: "absolute", md: "relative" },
+                marginLeft: { xs: 0, lg: 20 },
+              }}
+            >
+              Here To Help to be at <span>Y</span>our<span>B</span>est.
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                marginLeft: { xs: 0, lg: 30 },
+                marginTop: 5,
+                maxWidth: 700,
+              }}
+            >
+              We offer{" "}
+              <HashLink to={"/services#housekeeping"} className="hashlink">
+                Housekeeping
+              </HashLink>{" "}
+              ,{" "}
+              <HashLink to={"/services#childcare"} className="hashlink">
+                Child Care
+              </HashLink>
+              , and{" "}
+              <HashLink to={"/services#seniorcare"} className="hashlink">
+                Senior Care
+              </HashLink>{" "}
+              services to ease the burden of managing multiple responsibilities.
+              By outsourcing these tasks to our professionals, you can reclaim
+              valuable time to focus on work, family, and personal well-being.
+              Our services not only ensure a clean and organized living
+              environment but also provide expert care for children and seniors,
+              offering peace of mind and support for busy individuals balancing
+              numerous roles.
+            </Typography>
+          </Grid>
+        </Grid>
       </Box>
-
-      <Divider />
 
       <WhyUs />
 
-      <Divider />
-
-      <Box id="difference" justifyItems={"center"}>
+      <Box
+        id="difference"
+        sx={{
+          p: 5,
+          textAlign: "center",
+        }}
+      >
         <Container>
-          <Typography
-            variant="h4"
-            className="bottom-line"
-            sx={{
-              p: 5,
-              textAlign: "center",
-            }}
-          >
+          <Typography variant="h4" className="bottom-line">
             What Makes <span className="color">U</span>s Different?
           </Typography>
         </Container>
@@ -251,7 +235,7 @@ export default function Home() {
             sm={4}
             sx={{
               display: "flex",
-              marginY: 5,
+              py: 5,
               marginX: { xs: 2, sm: 0 },
             }}
           >
@@ -329,6 +313,7 @@ export default function Home() {
                 display: "flex",
                 justifySelf: "center",
                 m: "auto",
+                boxShadow: "5px 5px #4e4d66",
               }}
             >
               Book a Service Now!

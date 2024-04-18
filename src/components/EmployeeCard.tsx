@@ -28,7 +28,7 @@ export default function EmployeeCard({
       style={{
         maxWidth: 345,
         height: "100%",
-        backgroundColor: "#fff0f0",
+        backgroundColor: "#dccfdf80",
         display: "flex",
         flexDirection: "column",
       }}

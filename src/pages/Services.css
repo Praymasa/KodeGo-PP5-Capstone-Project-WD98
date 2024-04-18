@@ -1,0 +1,28 @@
+.banner-title {
+    font-family: "Oleo Script", system-ui !important;
+    color: #9c27b0;
+}
+
+ol li {
+    margin-bottom: 8px;
+}
+
+#housekeeping {
+    background-image: url(../../public/Images/empty-room-bg.jpg);
+    min-height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#seniorcare {
+    background-image: url(../../public/Images/SeniorCare/senior-hero.png);
+    min-height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

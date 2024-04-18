@@ -1,24 +1,41 @@
-import ReservationList from "./components/ReservationList";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
-const routes = {
-  name: "ReservationLists",
-  path: "/reservations",
-  element: (
-    <ReservationList
-      emp_id={0}
-      res_id={""}
-      client_name={""}
-      client_number={""}
-      client_detailedAdd={""}
-      client_city={""}
-      client_province={""}
-      emp_name={""}
-      service_title={""}
-      contract_term={""}
-      date={""}
-      time={""}
-    />
-  ),
-};
+const routes = [
+  {
+    name: "Home",
+    path: "/",
+    element: <Home />,
+  },
+  {
+    name: "About",
+    path: "/about",
+    element: <About />,
+  },
+  {
+    name: "Services",
+    path: "/services",
+    element: <Services />,
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+    element: <Contact />,
+  },
+  {
+    name: "Sign Up",
+    path: "/singup",
+    element: <Signup />,
+  },
+  {
+    name: "Sign In",
+    path: "/singin",
+    element: <Login />,
+  },
+];
 
 export default routes;

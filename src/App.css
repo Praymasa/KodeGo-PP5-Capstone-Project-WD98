@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-size: 16px !important;
     font-family: "Belleza", sans-serif !important;
-    background-color: #d7fadc !important;
+    background-color: #dccfdf80 !important;
 }
 
 .breadcrumb-item {
@@ -64,13 +64,3 @@ body {
 }
 
 /* Navigation-CSS */
-
-#why {
-    background-image: url(../public/Images/Family-background-light.jpg);
-    min-height: 500px;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
